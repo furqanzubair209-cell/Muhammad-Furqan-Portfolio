@@ -214,7 +214,7 @@ https://www.linkedin.com/in/muhammad-furqan-228807304/
 
 Fiverr
 
-https://www.fiverr.com/s/aek7yv7
+https://www.fiverr.com/furqan191005
 
 Upwork
 
