@@ -1,0 +1,33 @@
+export const profile = {
+  name: "Muhammad Furqan",
+  role: "AI/ML Developer | Full-Stack Developer",
+  tagline: "Computer Science Undergraduate",
+  university: "The Superior University, Lahore",
+  cgpa: "3.50/4.00",
+  location: "Mustafa Park, Near Marghazar Colony, Lahore, Pakistan",
+  email: "furqanzubair209@gmail.com",
+  phone: "+92 322 7200433",
+  whatsapp: "https://wa.me/923227200433",
+  github: "https://github.com/furqanzubair209-cell",
+  linkedin: "https://www.linkedin.com/in/muhammad-furqan-228807304/",
+  portfolio: "https://furqannewportfolio.netlify.app/",
+  fiverr: "https://www.fiverr.com/s/aek7yv7",
+  upwork:
+    "https://www.upwork.com/services/product/development-it-a-full-stack-react-node-js-e-commerce-website-2098841926595393153?ref=project_share",
+  resume: "/furqan-cv.pdf",
+  bio: [
+    "I am a dedicated Computer Science Undergraduate at The Superior University, Lahore, maintaining a CGPA of 3.50/4.00 while actively refining my programming and software engineering capabilities.",
+    "My core interests align with Artificial Intelligence, Machine Learning, Workflow Automation, and Full-Stack Engineering. I focus on developing clean, modular, and optimized architectures that tackle real-world automation challenges.",
+  ],
+  currentGoal: "Secure an AI/ML or Web Development internship",
+  currentlyLearning: "Advanced NLP, Deep Learning, Cloud Deployments",
+  interests: "Open Source, System Design, Automation, Tech Writing",
+  languages: "English (Fluent), Urdu (Native), Punjabi (Fluent)",
+  softSkills: [
+    "Analytical Problem Solving",
+    "Collaboration & Teamwork",
+    "Lifelong Adaptive Learner",
+    "Time Management & Discipline",
+    "Clear Professional Communication",
+  ],
+};

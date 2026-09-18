@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", "Geist Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: #070a12;
+  --color-surface: #0d1220;
+  --color-surface-2: #111827;
+  --color-border: #1e293b;
+  --color-primary: #22d3ee;
+  --color-primary-dim: #0e7490;
+  --color-secondary: #818cf8;
+  --color-success: #34d399;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #070a12;
+  --surface: #0d1220;
+  --surface-2: #111827;
+  --border: #1e293b;
+  --primary: #22d3ee;
+  --secondary: #818cf8;
+  --success: #34d399;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --danger: #f87171;
+  --on-primary: #04121a;
+  --shadow-color: 190 100% 50%;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --primary: #0e7490;
+  --secondary: #4f46e5;
+  --success: #059669;
+  --text: #0f172a;
+  --muted: #475569;
+  --danger: #dc2626;
+  --on-primary: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--primary) 35%, transparent);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.container-px {
+  padding-left: clamp(1.25rem, 5vw, 3rem);
+  padding-right: clamp(1.25rem, 5vw, 3rem);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.section-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Lightweight tooltip for icon-only controls. Purely visual — the
+   aria-label on each element already carries the accessible name. */
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 50;
+}
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (hover: none) {
+  [data-tooltip]::after {
+    display: none;
+  }
+}
