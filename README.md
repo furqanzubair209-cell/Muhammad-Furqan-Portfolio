@@ -218,8 +218,7 @@ https://www.fiverr.com/s/aek7yv7
 
 Upwork
 
-https://www.upwork.com/services/product/development-it-a-full-stack-react-node-js-e-commerce-website-2098841926595393153?ref=project_share
-
+https://www.upwork.com/freelancers/~016a10d73534b30cfe
 ---
 
 📧 Contact
